@@ -1,0 +1,27 @@
+{
+    "name": "rquadling/typed-array",
+    "description": "A simple base class for typed arrays",
+    "authors": [
+        {
+            "name": "Richard Quadling",
+            "email": "RQuadling@GMail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "RQuadling\\": ".\\src\\"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "composer dump-autoload --optimize"
+        ],
+        "post-update-cmd": [
+            "composer dump-autoload --optimize"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}
