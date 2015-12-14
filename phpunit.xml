@@ -1,43 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<phpunit
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
-        backupGlobals="true"
-        backupStaticAttributes="false"
-        bootstrap=""
-        cacheTokens="false"
-        colors="false"
-        columns="80"
-        convertErrorsToExceptions="true"
-        convertNoticesToExceptions="true"
-        convertWarningsToExceptions="true"
-        forceCoversAnnotation="false"
-        mapTestClassNameToCoveredClassName="false"
-        printerClass="PHPUnit_TextUI_ResultPrinter"
-        processIsolation="false"
-        stopOnError="false"
-        stopOnFailure="false"
-        stopOnIncomplete="false"
-        stopOnRisky="false"
-        stopOnSkipped="false"
-        beStrictAboutTestsThatDoNotTestAnything="false"
-        beStrictAboutOutputDuringTests="false"
-        beStrictAboutTestSize="false"
-        beStrictAboutTodoAnnotatedTests="false"
-        beStrictAboutChangesToGlobalState="false"
-        checkForUnintentionallyCoveredCode="false"
-        testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
-        timeoutForSmallTests="1"
-        timeoutForMediumTests="10"
-        timeoutForLargeTests="60"
-        verbose="false"
-        stderr="false">
-    <php>
-        <includePath>./vendor/autoload.php</includePath>
-    </php>
-    <testsuites>
-        <testsuite name="TypedArray">
-            <directory suffix="Test.php" phpVersion="5.3.0" phpVersionOperator="&gt;=">./tests</directory>
-        </testsuite>
-    </testsuites>
+<phpunit>
+    <testsuite name="TypedArray">
+        <directory>./tests</directory>
+    </testsuite>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
 </phpunit>
