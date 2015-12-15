@@ -1,9 +1,11 @@
-[![Build Status](https://travis-ci.org/rquadling/typed-array.png?branch=master)](https://travis-ci.org/rquadling/typed-array)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rquadling/typed-array/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rquadling/typed-array/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/rquadling/typed-array/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rquadling/typed-array/build-status/master)
-[![Scrutinizer Coverage](https://img.shields.io/scrutinizer/coverage/g/rquadling/typed-array.svg?style=plastic)](https://scrutinizer-ci.com/g/rquadling/typed-array/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/rquadling/typed-array/version.png)](https://packagist.org/packages/rquadling/typed-array)
-[![Total Downloads](https://poser.pugx.org/rquadling/typed-array/d/total.png)](https://packagist.org/packages/rquadling/typed-array)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/rquadling/typed-array.svg?style=plastic)](https://scrutinizer-ci.com/g/rquadling/typed-array/?branch=master)
+[![Scrutinizer Coverage](https://img.shields.io/scrutinizer/coverage/g/rquadling/typed-array.svg?style=plastic)](https://scrutinizer-ci.com/coverage/g/rquadling/typed-array/?branch=master)
+[![Scrutinizer Build Status](https://img.shields.io/scrutinizer/build/g/rquadling/typed-array.svg?style=plastic)](https://scrutinizer-ci.com/build/g/rquadling/typed-array/?branch=master)
+
+[![Travid Build Status](https://img.shields.io/travis/rquadling/typed-array.svg?style=plastic)](https://travis-ci.org/rquadling/typed-array)
+
+[![Latest Stable Version](https://img.shields.io/packagist/v/rquadling/typed-array.svg?style=plastic)](https://packagist.org/packages/rquadling/typed-array)
+[![Packagist](https://img.shields.io/packagist/dt/rquadling/typed-array.svg?style=plastic)](https://packagist.org/packages/rquadling/typed-array)
 
 Richard Quadling's TypedArray
 =============================
