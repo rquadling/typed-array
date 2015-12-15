@@ -5,6 +5,7 @@ namespace RQuadling\TypedArray;
  * Class TypedArray
  *
  * @package RQuadling
+ * @todo Implement a 'clone by default' mechanism.
  */
 abstract class TypedArray extends \ArrayObject
 {
