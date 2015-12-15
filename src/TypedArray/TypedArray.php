@@ -1,5 +1,5 @@
 <?php
-namespace RQuadling;
+namespace RQuadling\TypedArray;
 
 /**
  * Class TypedArray

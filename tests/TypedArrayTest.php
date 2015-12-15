@@ -1,5 +1,5 @@
 <?php
-namespace RQuadling;
+namespace RQuadling\TypedArray;
 
 use \PHPUnit_Framework_TestCase;
 
@@ -27,7 +27,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \RuntimeException
-     * @expectedExceptionMessage \NonExistentClass does not exist for RQuadling\NonExistentClassArrayType::ARRAY_TYPE
+     * @expectedExceptionMessage \NonExistentClass does not exist for RQuadling\TypedArray\NonExistentClassArrayType::ARRAY_TYPE
      * @group generatesException
      */
     public function testNonExistentClassArrayTypeThrowsException()
@@ -47,7 +47,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Non object of type 'double' supplied. Wanted object of type 'RQuadling\Item'.
+     * @expectedExceptionMessage Non object of type 'double' supplied. Wanted object of type 'RQuadling\TypedArray\Item'.
      * @group generatesException
      */
     public function testArrayOfNonObjectInputThrowsException()
@@ -57,7 +57,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Object of class 'RQuadling\Collection' supplied. Wanted object of type 'RQuadling\Item'.
+     * @expectedExceptionMessage Object of class 'RQuadling\TypedArray\Collection' supplied. Wanted object of type 'RQuadling\TypedArray\Item'.
      * @group generatesException
      */
     public function testArrayOfMismatchedObjectsForInputThrowsException()
@@ -67,7 +67,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Non object of type 'double' supplied. Wanted object of type 'RQuadling\Item'.
+     * @expectedExceptionMessage Non object of type 'double' supplied. Wanted object of type 'RQuadling\TypedArray\Item'.
      * @group generatesException
      */
     public function testAddingInvalidTypeToEmptyArrayThrowsException()
@@ -78,7 +78,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Object of class 'RQuadling\Collection' supplied. Wanted object of type 'RQuadling\Item'.
+     * @expectedExceptionMessage Object of class 'RQuadling\TypedArray\Collection' supplied. Wanted object of type 'RQuadling\TypedArray\Item'.
      * @group generatesException
      */
     public function testAddingInvalidClassOfObjectToEmptyArrayThrowsException()
@@ -89,7 +89,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Non object of type 'double' supplied. Wanted object of type 'RQuadling\Item'.
+     * @expectedExceptionMessage Non object of type 'double' supplied. Wanted object of type 'RQuadling\TypedArray\Item'.
      * @group generatesException
      */
     public function testAddingInvalidTypeToNonEmptyArrayThrowsException()
@@ -100,7 +100,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Object of class 'RQuadling\Collection' supplied. Wanted object of type 'RQuadling\Item'.
+     * @expectedExceptionMessage Object of class 'RQuadling\TypedArray\Collection' supplied. Wanted object of type 'RQuadling\TypedArray\Item'.
      * @group generatesException
      */
     public function testAddingInvalidClassOfObjectToNonEmptyArrayThrowsException()
@@ -203,10 +203,10 @@ class Item
 
 class Collection extends TypedArray
 {
-    const ARRAY_TYPE = 'RQuadling\Item';
+    const ARRAY_TYPE = 'RQuadling\TypedArray\Item';
 }
 
 class Collections extends TypedArray
 {
-    const ARRAY_TYPE = 'RQuadling\Item';
+    const ARRAY_TYPE = 'RQuadling\TypedArray\Item';
 }
