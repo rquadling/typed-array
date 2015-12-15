@@ -3,7 +3,7 @@ before_script:
     - composer self
     - composer --version
     - composer install -n
-    - cwd
+    - pwd
     - cat ./vendor/composer/autoload_classmap.php
 language: php
 php:
