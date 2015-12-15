@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rquadling/typed-array.svg?branch=master)](https://travis-ci.org/rquadling/typed-array)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rquadling/typed-array/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rquadling/typed-array/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/rquadling/typed-array/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/rquadling/typed-array/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/rquadling/typed-array/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rquadling/typed-array/build-status/master)
 Richard Quadling's TypedArray
 =============================
 
