@@ -1,7 +1,8 @@
 sudo: false
 before_script:
-    - composer self-update
-    - composer install -n --dev
+    - composer self
+    - composer --version
+    - composer install -n
 language: php
 php:
   - 5.4
