@@ -1,7 +1,7 @@
 <?php
 namespace RQuadling;
 
-use PHPUnit_Framework_TestCase;
+use \PHPUnit_Framework_TestCase;
 
 class TypedArrayTest extends PHPUnit_Framework_TestCase
 {
