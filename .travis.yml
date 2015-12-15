@@ -9,7 +9,7 @@ php:
   - 5.6
   - 7
   - hhvm
-script:
-    - phpunit --coverage-text --coverage-clover=coverage.clover
-    - wget https://scrutinizer-ci.com/ocular.phar
-    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+#script:
+#    - phpunit --coverage-text --coverage-clover=coverage.clover
+#    - wget https://scrutinizer-ci.com/ocular.phar
+#    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
