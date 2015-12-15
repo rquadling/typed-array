@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<phpunit>
+<phpunit
+        colors="true"
+        bootstrap="./tests/bootstrap.php"
+        verbose="true"
+>
     <testsuite name="TypedArray">
         <directory>./tests</directory>
     </testsuite>
