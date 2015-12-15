@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/rquadling/typed-array.svg?branch=master)](https://travis-ci.org/rquadling/typed-array)
 Richard Quadling's TypedArray
 =============================
 
