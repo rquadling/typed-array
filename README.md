@@ -11,9 +11,9 @@ class ItemCollection extends \RQuadling\TypedArray
 }
 ```
 
-Now you can call `$myCollection = new Collection;`. You can supply an array of `Item`, or another collection of `Item`.
+Now you can call `$myItems = new ItemCollection;`. You can supply an array of `Item`, or another collection of `Item`s.
 
-If you want a copy of a collection, you will need to `clone` it.
+If you want to copy a collection, you will need to `clone` it.
 
 If you want to add functionality to your collections, then create an abstract subclass with that functionality.
 
