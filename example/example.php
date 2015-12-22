@@ -67,7 +67,7 @@ $itemsEx[] = new Item;
 /**
  * Use the each() method to set the position property in the item.
  */
-$itemsEx->each(function(Item $item, $key){
+$itemsEx->each(function(Item $item, $key) {
     $item->position = $key;
 });
 
@@ -80,14 +80,14 @@ $itemsEx2 = clone $itemsEx;
  * Use the each() method to make further changes to the position property of
  * the cloned collection.
  */
-$itemsEx2->each(function(Item $item, $key){
+$itemsEx2->each(function(Item $item, $key) {
     $item->position += $key;
 });
 
 /**
  * Make a new simple collection using the same items as the cloned collection.
  */
-$items2 = new ItemCollection( $itemsEx2);
+$items2 = new ItemCollection($itemsEx2);
 
 /**
  * Show the results of all of this work.
