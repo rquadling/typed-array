@@ -1,11 +1,11 @@
 <?php
+
 namespace RQuadling\TypedArray;
 
 /**
- * Class TypedArray
+ * Class TypedArray.
  *
- * @package RQuadling
- * @todo Implement a 'clone by default' mechanism.
+ * @todo Implement a 'clone by default' mechanism
  */
 abstract class TypedArray extends \ArrayObject
 {
@@ -22,13 +22,14 @@ abstract class TypedArray extends \ArrayObject
 
     /**
      * TypedArray constructor.
-     * @param array|object $input The input parameter accepts an array or an Object.
-     * @param int $flags Flags to control the behaviour of the ArrayObject object.
-     * @param string $iterator_class Specify the class that will be used for iteration of the ArrayObject object. ArrayIterator is the default class used.
+     *
+     * @param array|object $input          The input parameter accepts an array or an Object
+     * @param int          $flags          Flags to control the behaviour of the ArrayObject object
+     * @param string       $iterator_class Specify the class that will be used for iteration of the ArrayObject object. ArrayIterator is the default class used
      */
-    public function __construct($input = [], $flags = 0, $iterator_class = "ArrayIterator")
+    public function __construct($input = [], $flags = 0, $iterator_class = 'ArrayIterator')
     {
-        /**
+        /*
          * Validate that the subclass has correctly defined an ARRAY_TYPE.
          */
         $this->arrayType = static::ARRAY_TYPE;
@@ -36,7 +37,7 @@ abstract class TypedArray extends \ArrayObject
         if (empty($this->arrayType)) {
             throw new \RuntimeException(
                 sprintf(
-                    "%s::ARRAY_TYPE must be set to a valid class.",
+                    '%s::ARRAY_TYPE must be set to a valid class.',
                     get_called_class()
                 )
             );
@@ -45,26 +46,26 @@ abstract class TypedArray extends \ArrayObject
         if (!class_exists($this->arrayType)) {
             throw new \RuntimeException(
                 sprintf(
-                    "%s does not exist for %s::ARRAY_TYPE",
+                    '%s does not exist for %s::ARRAY_TYPE',
                     $this->arrayType,
                     get_called_class()
                 )
             );
         }
 
-        /**
+        /*
          * Validate that the input is an array or an object with an Traversable interface.
          */
         if (!(is_array($input) || (is_object($input) && in_array('Traversable', class_implements($input))))) {
             throw new \InvalidArgumentException('$input must be an array or an object that implements \Traversable.');
         }
 
-        /**
+        /*
          * Create an empty array.
          */
         parent::__construct([], $flags, $iterator_class);
 
-        /**
+        /*
          * Append each item so to validate it's type.
          */
         foreach ($input as $key => $value) {
@@ -85,12 +86,12 @@ abstract class TypedArray extends \ArrayObject
     /**
      * Check the type and then store the value.
      *
-     * @param int|null $offset The offset to store the value at or null to append the value.
-     * @param mixed $value The value to store.
+     * @param int|null $offset The offset to store the value at or null to append the value
+     * @param mixed    $value  The value to store
      */
     public function offsetSet($offset, $value)
     {
-        /**
+        /*
          * The value must be an object.
          */
         if (!is_object($value)) {

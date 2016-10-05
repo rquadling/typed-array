@@ -1,7 +1,8 @@
 <?php
+
 namespace RQuadling\TypedArray;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit_Framework_TestCase;
 
 class TypedArrayTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +13,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testEmptyArrayTypeThrowsException()
     {
-        new EmptyArrayType;
+        new EmptyArrayType();
     }
 
     /**
@@ -22,7 +23,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testNullArrayTypeThrowsException()
     {
-        new NullArrayType;
+        new NullArrayType();
     }
 
     /**
@@ -32,7 +33,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testNonExistentClassArrayTypeThrowsException()
     {
-        new NonExistentClassArrayType;
+        new NonExistentClassArrayType();
     }
 
     /**
@@ -62,7 +63,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testArrayOfMismatchedObjectsForInputThrowsException()
     {
-        new Collection([new Collection]);
+        new Collection([new Collection()]);
     }
 
     /**
@@ -72,7 +73,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testAddingInvalidTypeToEmptyArrayThrowsException()
     {
-        $collection = new Collection;
+        $collection = new Collection();
         $collection[] = M_PI;
     }
 
@@ -83,7 +84,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testAddingInvalidClassOfObjectToEmptyArrayThrowsException()
     {
-        $collection = new Collection;
+        $collection = new Collection();
         $collection[] = new Collection();
     }
 
@@ -94,7 +95,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testAddingInvalidTypeToNonEmptyArrayThrowsException()
     {
-        $collection = new Collection([new Item]);
+        $collection = new Collection([new Item()]);
         $collection[] = M_PI;
     }
 
@@ -116,7 +117,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testNonTraversableObjectAsInputThrowsException()
     {
-        new Collections(new Item);
+        new Collections(new Item());
     }
 
     /**
@@ -126,7 +127,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
     {
         $exception = null;
         try {
-            new Collection;
+            new Collection();
         } catch (\Exception $exception) {
         }
 
@@ -140,7 +141,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
     {
         $exception = null;
         try {
-            new Collection([new Item]);
+            new Collection([new Item()]);
         } catch (\Exception $exception) {
         }
 
@@ -152,7 +153,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testNoExceptionsAreThrowWithValidTraversableInput()
     {
-        $existingCollection = new Collection([new Item]);
+        $existingCollection = new Collection([new Item()]);
         $newCollection = null;
         $exception = null;
         try {
@@ -169,7 +170,7 @@ class TypedArrayTest extends PHPUnit_Framework_TestCase
      */
     public function testNoExceptionsAreThrowWithValidClonedTraversableInput()
     {
-        $existingCollection = new Collection([new Item]);
+        $existingCollection = new Collection([new Item()]);
         $newCollection = null;
         $exception = null;
         try {
